@@ -20,9 +20,9 @@ import 'aos/dist/aos.css';
   }, []);
   return (
     
-    <Box   id='about' mt='150px'  width={{lg:'100%',sm:'100%',base:'100%',md:'100%'}} overflow='hidden'>
+    <Box   id='about' pt='150px'zIndex='-1' backgroundColor={mode?"black":'#ffffff'}  width={{lg:'100%',sm:'100%',base:'100%',md:'100%'}} overflow='hidden'>
        
-    <Text fontSize='38px' fontWeight='500' color="#FFFFFF" >About me</Text>
+    <Text fontSize='38px' fontWeight='500' color="#a6a6a6" >About me</Text>
     <Text color='#a6a6a6' mb='80px'>My introduction</Text>
    
    

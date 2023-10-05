@@ -19,12 +19,12 @@ AOS.init({duration:2000})
     {image:"https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png",name:'Netlify'},
     {image:"https://cdn-icons-png.flaticon.com/128/733/733553.png",name:"Github"},]
   return (
-   <Box mt='80px' data-aos="fade-up" id='skills'>
-     <Text color="#FFFFFF" fontSize='38px' fontWeight='500' >Skills</Text>
+   <Box pt='80px' backgroundColor={mode?"black":'#ffffff'}  id='skills'>
+     <Text color="#a6a6a6" fontSize='38px' fontWeight='500' >Skills</Text>
      <Text color="#FFFFFF" color='#a6a6a6' mb='80px'>My Technical Skills</Text>
      <Box display={{base:'grid',sm:'grid',md:'grid',lg:'flex'}}  justifyContent='center' alignItems='center'   gridTemplateColumns={{base:'repeat(2,1fr)',sm:"repeat(2,1fr)"}} gap='30px'  width={{base:'70%',sm:"70%",md:'70%',lg:'80%'}} margin='auto'   justifyContent='center'>
      {skills.map((el)=>(
-        <Box display='flex' padding='5px'  w='100%'  boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px" flexDirection='column' _hover={{
+        <Box display='flex' data-aos="fade-up" padding='5px'  w='100%'  boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px" flexDirection='column' _hover={{
           transform: "rotate(20deg) scaleX(1.2)",
           transition: "transform 0.2s"
         }} borderRadius='10%'  paddingBottom='5px' width={{lg:'80px'}}  justifyContent='center' >

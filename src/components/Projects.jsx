@@ -14,8 +14,8 @@ function Projects({handlemode,mode}) {
         ];
   return (
     <Box 
-     mt="80px"  overflow='hidden' id='projects'>
-        <Text color="#FFFFFF" fontSize='38px' fontWeight='500' >My Portfolio</Text>
+     pt="80px"  backgroundColor={mode?"black":'#ffffff'} overflow='hidden' id='projects'>
+        <Text color="#a6a6a6" fontSize='38px' fontWeight='500' >My Portfolio</Text>
         <Text color='#a6a6a6' mb='80px'>Projects Made</Text>
 <Box display='grid' gap='100px' margin='auto' width='70%' >
         {projects.map((el)=>(

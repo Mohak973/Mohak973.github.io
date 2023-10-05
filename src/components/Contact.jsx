@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Center,
+  Text,
   Flex,
   FormLabel,
   Heading,
@@ -56,6 +57,7 @@ export default function Contact({handlemode,mode}) {
       justify="center"
       bgColor={"transparent"}
       id="contact"
+      backgroundColor={mode?"black":'#ffffff'}
     >
       <div data-aos="fade-down-left">
         {/* <HashScroll hash="#contact">
@@ -91,7 +93,7 @@ export default function Contact({handlemode,mode}) {
                     hasArrow
                   >
                     <IconButton
-                     color='white'
+                     color={mode?"white":"black"}
                       aria-label="email"
                       variant="ghost"
                       size="lg"
@@ -108,7 +110,7 @@ export default function Contact({handlemode,mode}) {
 
                   <Link href="https://github.com/Mohak973">
                     <IconButton
-                     color='white'
+                     color={mode?"white":"black"}
                       aria-label="github"
                       variant="ghost"
                       size="lg"
@@ -124,7 +126,7 @@ export default function Contact({handlemode,mode}) {
 
                   <Link href="https://twitter.com/mohaktandon3?t=xtvpBvqVqa9VT0zjYuSt5Q&s=09">
                     <IconButton
-                    color='white'
+                    color={mode?"white":"black"}
                       aria-label="twitter"
                       variant="ghost"
                       size="lg"
@@ -139,7 +141,7 @@ export default function Contact({handlemode,mode}) {
 
                   <Link href="https://www.linkedin.com/in/mohak-tandon/">
                     <IconButton
-                     color='white'
+                     color={mode?"white":"black"}
                       aria-label="linkedin"
                       variant="ghost"
                       size="lg"
@@ -189,7 +191,9 @@ export default function Contact({handlemode,mode}) {
             </VStack>
           </Box>
         </Box>
+        
       </div>
+      
     </Flex>
   );
 }

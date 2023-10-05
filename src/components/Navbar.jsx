@@ -25,7 +25,7 @@ const toggleMobileMenu = () => {
   
   console.log(mode)
   return (
-    <div  style={{position:'fixed',top:'0',width:'100%',zIndex:'1',display:"flex" , overflow:'hidden',paddingBottom:'20px',paddingTop:'10px',boxShadow: "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",borderBottom:"1px solid #ffffff"}}   >
+    <div  style={{position:'fixed',top:'0',width:'100%',zIndex:"1000",backgroundColor:mode?"black":"#ffffff", display:"flex" , overflow:'hidden',paddingBottom:'20px',paddingTop:'10px',boxShadow: "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",borderBottom:"1px solid #ffffff"}}   >
     <Flex justify="space-between" alignItems="center"  w='100%'  >
       <IconButton
         icon={mobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -38,25 +38,25 @@ const toggleMobileMenu = () => {
       </Box>
       <Box display={{ base: "none", md: "block" }} >
          <Stack direction='row' >
-            <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{color:mode?"#8A3FFC":"ffffff"}} to='home'  href="#" smooth={true} offset={-100} duration={600}>
-            <Text color={mode ? '#ffffff':"black"} fontWeight='400'>Home</Text>
+            <Box paddingLeft='60px' >
+            <Link  to='home'  href="#" smooth={true} offset={-100} duration={600}>
+            <Text color={mode ? '#ffffff':"black"} fontWeight='400' _hover={{color:'#8A3FFC'}}>Home</Text>
             </Link>
             </Box>
-            <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link  to='about' href="#"  smooth={true} offset={-50} duration={600}   ><Text fontWeight='450' color={mode ? 'white':"black"} >About</Text></Link>
+            <Box paddingLeft='60px' >
+            <Link  to='about' href="#"  smooth={true} offset={-50} duration={600}   ><Text fontWeight='450' _hover={{color:'#8A3FFC'}} color={mode ? 'white':"black"} >About</Text></Link>
             </Box>
-            <Box paddingLeft='60px'_hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='skills'href="#"  smooth={true} offset={-170} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Skills</Text></Link>
+            <Box paddingLeft='60px'>
+            <Link to='skills'href="#"  smooth={true} offset={-170} duration={600}><Text fontWeight='450' _hover={{color:'#8A3FFC'}} color={mode ? 'white':"black"}>Skills</Text></Link>
             </Box>
-            <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='projects' href="#" smooth={true} offset={-100} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Projects</Text></Link>
+            <Box paddingLeft='60px' >
+            <Link to='projects' href="#" smooth={true} offset={-100} duration={600}><Text fontWeight='450' _hover={{color:'#8A3FFC'}} color={mode ? 'white':"black"}>Projects</Text></Link>
             </Box>
             {/* <Box paddingLeft='60px'> */}
-            {/* <Link _hover={{textDecor:"none",color:"#8A3FFC"}} download={ReactIcon}  smooth={true} offset={470} duration={600}><Text fontWeight='450'>Resume</Text></Link> */}
+            {/* <Link download={ReactIcon}  smooth={true} offset={470} duration={600}><Text fontWeight='450'>Resume</Text></Link> */}
             {/* </Box> */}
-            <Box paddingLeft='45px' paddingRight='10px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='contact'  href="#" smooth={true} offset={50} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Contact Me</Text></Link>
+            <Box paddingLeft='45px' paddingRight='10px' >
+            <Link to='contact'  href="#" smooth={true} offset={50} duration={600}><Text fontWeight='450' _hover={{color:'#8A3FFC'}} color={mode ? 'white':"black"}>Contact Me</Text></Link>
             </Box>
     
          </Stack>

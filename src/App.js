@@ -27,15 +27,15 @@ function App() {
   return (
     
     
-    <div className="App" style={{backgroundColor:dark?"black":"#ffffff"}} >
+    <div className="App" style={{backgroundColor:dark?"black":"ffffff"}} >
       
        <Navbar handlemode={handlemode} mode={dark}/>
-        <Home handlemode={handlemode} mode={dark}/>
+        <Home  mode={dark}/>
         
-        <About handlemode={handlemode} mode={dark}/>
-        <Skills handlemode={handlemode} mode={dark}/>
-        <Projects handlemode={handlemode} mode={dark}/>
-        <Contact handlemode={handlemode} mode={dark}/>
+        <About  mode={dark}/>
+        <Skills  mode={dark}/>
+        <Projects  mode={dark}/>
+        <Contact  mode={dark}/>
       
     </div>
       

@@ -19,6 +19,7 @@
     position: relative;
     cursor: pointer;
     font-size: var(--toggle-size);
+    z-index: 999;
   }
   
   .theme-checkbox::before {

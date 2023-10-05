@@ -5,7 +5,7 @@ import {Link as Dlink} from "react-scroll"
 
 function Home({handlemode,mode}) {
   return (
-    <Box   justifyContent='center' id='home'  w='100%' mt="150px"  overflow='hidden' >
+    <Box   justifyContent='center' id='home' backgroundColor={mode?"black":'#ffffff'} w='100%' pt="150px"  overflow='hidden' >
     
        <Flex flexWrap='wrap' margin='auto'   order={1} justify='center'  gap="50px" >
         <Box mt="70px">
@@ -16,7 +16,7 @@ function Home({handlemode,mode}) {
            </Stack>
         </Box >
         <Box textAlign="left"  order={{base:"3",sm:"3",md:"2",lg:"2"}} mt='10px' ml={{base:'10px'}} mr={{base:"10px"}} >
-           <Text color='#a6a6a6' fontSize='35px' mt="20px" fontWeight='bold' zIndex={0}>Hi,I'am Mohak Tandon</Text>
+           <Text color='#a6a6a6' fontSize='35px' mt="20px" fontWeight='bold'>Hi,I'am Mohak Tandon</Text>
            <Text color="#a6a6a6">Frontend developer</Text>
            <Text color="#a6a6a6" mt="10px">Enthusiatic in Web development and web designing</Text>
            <Dlink to='contact'   href="#" smooth={true} offset={50} duration={600}> <Button color="#FFFFFF" mt="30px" _hover={{textDecoration:"none"}} backgroundColor='#8A3FFC'  >Contact Me</Button></Dlink>
