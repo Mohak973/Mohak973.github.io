@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { UilUser,UilEstate,UilFileAlt,UilBriefcaseAlt,UilDesktopAlt,UilMessage } from "@iconscout/react-unicons";
 import { Box, Flex, IconButton, useDisclosure,Grid,GridItem,Stack,Text, textDecoration, Button } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ReactIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import {Link } from "react-scroll"
 import myresume from "../Assets/Mohak_Tandon_Resume (8).pdf"
-import {Link as DLink} from "@chakra-ui/react"
+import {Link as DLink} from "@chakra-ui/react";
+import  "./Navbar.css"
 
 
-function Navbar() {
-    const [dark,setdark]=useState(false);
+function Navbar({handlemode,mode}) {
+    
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [count,setcount]=useState(0)
 const { isOpen, onOpen, onClose } = useDisclosure();
@@ -17,17 +18,14 @@ const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handlemode=()=>{
-    setdark(!dark);
-  };
+  useEffect(()=>{
+    
+  },[mode])
  
-  const handleAbout=()=>{
-   setcount(count+1)
-   
-  }
   
+  console.log(mode)
   return (
-    <div  style={{position:'fixed',top:'0',width:'100%',zIndex:'1', backgroundColor:'rgba(255, 255, 255, 0.9)',overflow:'hidden',paddingBottom:'20px',paddingTop:'10px'}}   >
+    <div  style={{position:'fixed',top:'0',width:'100%',zIndex:'1',display:"flex" , overflow:'hidden',paddingBottom:'20px',paddingTop:'10px',boxShadow: "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",borderBottom:"1px solid #ffffff"}}   >
     <Flex justify="space-between" alignItems="center"  w='100%'  >
       <IconButton
         icon={mobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -36,40 +34,31 @@ const toggleMobileMenu = () => {
         onClick={toggleMobileMenu}
       />
       <Box display={{md:"none"}} m='5px'>
-
-        
-        <Button onClick={handlemode} _hover={{color:"#8A3FFC"}}>
-
-        {/* {dark?<UilSun /> : <UilMoon />} */}
-        </Button>
         
       </Box>
       <Box display={{ base: "none", md: "block" }} >
          <Stack direction='row' >
             <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='home'  href="#" smooth={true} offset={-100} duration={600}>
-            <Text fontWeight='400'>Home</Text>
+            <Link _hover={{color:mode?"#8A3FFC":"ffffff"}} to='home'  href="#" smooth={true} offset={-100} duration={600}>
+            <Text color={mode ? '#ffffff':"black"} fontWeight='400'>Home</Text>
             </Link>
             </Box>
             <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link  to='about' href="#"  smooth={true} offset={-50} duration={600}   ><Text fontWeight='450'  >About</Text></Link>
+            <Link  to='about' href="#"  smooth={true} offset={-50} duration={600}   ><Text fontWeight='450' color={mode ? 'white':"black"} >About</Text></Link>
             </Box>
             <Box paddingLeft='60px'_hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='skills'href="#"  smooth={true} offset={-170} duration={600}><Text fontWeight='450'>Skills</Text></Link>
+            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='skills'href="#"  smooth={true} offset={-170} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Skills</Text></Link>
             </Box>
             <Box paddingLeft='60px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='projects' href="#" smooth={true} offset={-100} duration={600}><Text fontWeight='450'>Projects</Text></Link>
+            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='projects' href="#" smooth={true} offset={-100} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Projects</Text></Link>
             </Box>
             {/* <Box paddingLeft='60px'> */}
             {/* <Link _hover={{textDecor:"none",color:"#8A3FFC"}} download={ReactIcon}  smooth={true} offset={470} duration={600}><Text fontWeight='450'>Resume</Text></Link> */}
             {/* </Box> */}
             <Box paddingLeft='45px' paddingRight='10px' _hover={{textDecoration:'none',color:"#8A3FFC"}}>
-            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='contact'  href="#" smooth={true} offset={50} duration={600}><Text fontWeight='450'>Contact Me</Text></Link>
+            <Link _hover={{textDecor:"none",color:"#8A3FFC"}} to='contact'  href="#" smooth={true} offset={50} duration={600}><Text fontWeight='450' color={mode ? 'white':"black"}>Contact Me</Text></Link>
             </Box>
-           
-           
-          
-
+    
          </Stack>
       </Box>
       <Box display={{base:"none",md:"block"}}  >
@@ -138,8 +127,11 @@ const toggleMobileMenu = () => {
                 </Stack>
             </GridItem>
         </Grid>
+        
      
     </Box>
+   
+        <input type="checkbox" class="theme-checkbox" onClick={handlemode}></input>
   </div>
   
   );

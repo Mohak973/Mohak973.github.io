@@ -1,11 +1,22 @@
+:root {
+  --brightness-day: 100%; /* Normal brightness during the day */
+  --brightness-night: 80%; /* Reduced brightness during the night */
+}
+
+/* Other styles for your app */
+
+
 .App {
   text-align: center;
-  
-    overflow: hidden;
- width: auto;
-
-
-
+  overflow: hidden;
+  width: auto;
+ 
+}
+.change{
+  text-align: center;
+  overflow: hidden;
+  width: auto;
+  filter: brightness(var(--brightness-night));
  
 }
 .App::before{

@@ -1,30 +1,5 @@
-@media  (min-width:1208px){
-    .img{
-       width: 900px;
-        
-        
-    }.desc{
-        
-    }
-   
-}
-
-@media (min-width:961px){
-    .img{
-        width:900px;
-    }
-}
-@media (min-width:641px){
-    .img{
-       
-        width:200%;
-    }
-    .desc{
-        
-    }
-}
-@media (min-width:1025px){
-    .img{
-        width:1500px;
+@media (max-width:1060px){
+    #mypic{
+        width:'120px'
     }
 }

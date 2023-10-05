@@ -22,7 +22,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
-export default function Contact() {
+export default function Contact({handlemode,mode}) {
   const form = useRef();
   useEffect(() => {
     AOS.init({ duration: 2000 });

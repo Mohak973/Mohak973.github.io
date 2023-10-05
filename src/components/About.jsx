@@ -12,14 +12,8 @@ import 'aos/dist/aos.css';
  
     
     
- function About(){
+ function About({handlemode,mode}){
   
-  
-  
- 
- 
- 
-
   React.useEffect(() => {
     AOS.init({ duration: 2000 });
     
@@ -32,19 +26,19 @@ import 'aos/dist/aos.css';
     <Text color='#a6a6a6' mb='80px'>My introduction</Text>
    
    
-    <Box  display={{lg:'flex',md:'flex',sm:'grid',base:'grid'}}  mt='200px'  width='70%'  gap={{lg:'250px',md:'150px',sm:'100px',base:'100px'}} m='auto' textAlign='center'>
+    <Box  display={{lg:'flex',md:'flex',sm:'grid',base:'grid'}} w='fit-content' mt='200px'   width='70%'  gap={{lg:'250px',md:'150px',sm:'100px',base:'100px'}} m='auto' textAlign='center'>
       
      
-      <Box data-aos="fade-right"  className='img' ml={{lg:'100px',base:'0px'}}  mr={{base:'40px'}}  
+      <Box data-aos="fade-right" display='flex' justifyContent='center' alignItems='center'    ml={{lg:'100px',base:'0px'}}  mr={{base:'40px'}}  
      
      
      
     
        >
-        <Image src={mohakpic}  boxSize={{lg:'320px',md:'300px',sm:'100%',base:'100%'}} borderRadius="5%"></Image>
+        <Image src={mohakpic} w='100%' h='80%' borderRadius='10px'></Image>
       </Box>
      
-     <Box data-aos="fade-left" className='desc' h='400px'   
+     <Box data-aos="fade-left" className='desc' h='330px'   
      
      
     
